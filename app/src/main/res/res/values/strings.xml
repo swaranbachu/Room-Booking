@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">RoomBooking</string>
+
+    <string-array name="Book_meet_exam">
+        <item>Select</item>
+        <item>Meeting</item>
+        <item>Exam</item>
+    </string-array>
+
+
+    <string-array name="block_names">
+        <item>Select</item>
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+    </string-array>
+</resources>
