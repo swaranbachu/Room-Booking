@@ -29,7 +29,7 @@
 
     <TextView
         android:id="@+id/tv_room_name"
-        android:text="Add Room Name"
+        android:text="Add Floor Name"
         android:layout_marginTop="14dp"
         android:textColor="#A76464"
         android:layout_marginLeft="15dp"
@@ -63,6 +63,75 @@
         android:background="@drawable/edittext_rounded"
         android:hint="Add Capacity"
         android:padding="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:textColorHint="#C5BFC2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/tv_equipment1"
+        android:text="Software Equipment"
+        android:layout_marginTop="14dp"
+        android:textColor="#A76464"
+        android:layout_marginLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/tv_equipment_sw"
+        android:background="@drawable/edittext_rounded"
+        android:hint="Software Equipment"
+        android:padding="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:textColorHint="#C5BFC2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_equipment_2"
+        android:text="Hardwere Equipment"
+        android:layout_marginTop="14dp"
+        android:textColor="#A76464"
+        android:layout_marginLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/tv_equipment_hw"
+        android:background="@drawable/edittext_rounded"
+        android:hint="Hardwere Equipment"
+        android:padding="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:textColorHint="#C5BFC2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/tv_desc_room"
+        android:text="Description of Room"
+        android:layout_marginTop="14dp"
+        android:textColor="#A76464"
+        android:layout_marginLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/et_desc_room"
+        android:background="@drawable/edittext_rounded"
+        android:hint="Description of Room"
+        android:padding="8dp"
+        android:minLines="3"
+        android:gravity="top"
         android:layout_marginTop="4dp"
         android:layout_marginLeft="13dp"
         android:layout_marginRight="13dp"
