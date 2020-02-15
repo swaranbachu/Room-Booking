@@ -24,7 +24,7 @@ public class AdminDashBoardActivity extends AppCompatActivity {+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);*/
 
 
-        btn_addblock=(Button)findViewById(R.id.btn_addblock);
+        btn_addblock=(Button)findViewById(R.id.btn_addfloor);
         btn_add_room=(Button)findViewById(R.id.btn_add_room);
         btn_not_booked_rooms=(Button)findViewById(R.id.btn_not_booked_rooms);
         btn_booked_rooms=(Button)findViewById(R.id.btn_booked_rooms);
