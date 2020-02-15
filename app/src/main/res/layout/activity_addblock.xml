@@ -5,7 +5,7 @@
 
     <TextView
     android:id="@+id/tv_block_name"
-    android:text="Add Block Name"
+    android:text="Add Floor Name"
     android:layout_marginTop="14dp"
     android:textColor="#A76464"
     android:layout_marginLeft="15dp"
@@ -15,7 +15,7 @@
     <EditText
         android:id="@+id/et_block_name"
         android:background="@drawable/edittext_rounded"
-        android:hint="Add Block Name"
+        android:hint="Add Floor Name"
         android:padding="8dp"
         android:layout_marginTop="4dp"
         android:layout_marginLeft="13dp"
