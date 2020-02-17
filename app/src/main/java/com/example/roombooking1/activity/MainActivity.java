@@ -1,4 +1,4 @@
-package com.example.roombooking1;
+package com.example.roombooking1.activity;
 
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -10,6 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.a.roombooking.R;
+import com.example.roombooking1.R;
 
 public class MainActivity extends AppCompatActivity {
     Button btn_admnlogin,btn_userlogin;

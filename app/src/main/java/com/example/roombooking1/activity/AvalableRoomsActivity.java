@@ -1,4 +1,4 @@
-package com.example.roombooking1;
+package com.example.roombooking1.activity;
 
 import android.app.ProgressDialog;
 import android.content.SharedPreferences;
@@ -16,6 +16,7 @@ import com.a.roombooking.R;
 import com.a.roombooking.RetrofitInstance;
 import com.a.roombooking.adapter.AvalableRoomsAdapter;
 import com.a.roombooking.model.AvalableRoomsPojo;
+import com.example.roombooking1.R;
 
 import java.util.ArrayList;
 import java.util.List;

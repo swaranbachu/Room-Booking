@@ -1,4 +1,4 @@
-package com.example.roombooking1;
+package com.example.roombooking1.activity;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -19,6 +19,7 @@ import com.a.roombooking.R;
 import com.a.roombooking.ResponseData;
 import com.a.roombooking.RetrofitInstance;
 import com.a.roombooking.Utils;
+import com.example.roombooking1.R;
 
 import retrofit2.Call;
 import retrofit2.Callback;

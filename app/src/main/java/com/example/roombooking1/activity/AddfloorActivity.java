@@ -1,4 +1,4 @@
-package com.a.roombooking1.activity;
+package com.example.roombooking1.activity;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;

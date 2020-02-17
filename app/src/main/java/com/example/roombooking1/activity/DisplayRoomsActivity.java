@@ -1,15 +1,12 @@
-package com.example.roombooking1;
+package com.example.roombooking1.activity;
 
-import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.TypedValue;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,8 +17,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.a.roombooking.EndPointUrl;
 import com.a.roombooking.R;
 import com.a.roombooking.RetrofitInstance;
-import com.a.roombooking.adapter.DisplayBlocksAdapter;
-import com.a.roombooking.model.BlockPOJO;
+import com.a.roombooking.adapter.DisplayRoomsAdapter;
+import com.a.roombooking.model.RoomsPOJO;
+import com.example.roombooking1.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,47 +28,47 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class DisplayBlocksActivity extends AppCompatActivity {
-    Button btn_edit_profile,btn_avalable_rooms,btn_mybooked_rooms,btn_logout;
-    List<BlockPOJO> a1;
+public class DisplayRoomsActivity extends AppCompatActivity {
+    List<RoomsPOJO> a1;
     RecyclerView recyclerView;
-    DisplayBlocksAdapter displayBlocksAdapter;
+    DisplayRoomsAdapter displayRoomsAdapter;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_userdashboard);
-        getSupportActionBar().setTitle("Blocks");
+        getSupportActionBar().setTitle("Rooms");
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         a1 = new ArrayList<>();
-        recyclerView = (RecyclerView)findViewById(R.id.recyclerView);
+        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
 
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(DisplayBlocksActivity.this, 2);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(DisplayRoomsActivity.this, 2);
         recyclerView.setLayoutManager(gridLayoutManager);
 
 
         recyclerView.addItemDecoration(new GridSpacingItemDecoration(2, dpToPx(25), true));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
-        displayBlocksAdapter = new DisplayBlocksAdapter(DisplayBlocksActivity.this, a1);
-        recyclerView.setAdapter(displayBlocksAdapter);
+        displayRoomsAdapter = new DisplayRoomsAdapter(DisplayRoomsActivity.this, a1);
+        recyclerView.setAdapter(displayRoomsAdapter);
         getAllServices();
     }
 
     public void getAllServices() {
         EndPointUrl apiService = RetrofitInstance.getRetrofitInstance().create(EndPointUrl.class);
-        Call<List<BlockPOJO>> call = apiService.getblock();
-        call.enqueue(new Callback<List<BlockPOJO>>() {
+        Call<List<RoomsPOJO>> call = apiService.getRooms(getIntent().getStringExtra("blockname"));
+        call.enqueue(new Callback<List<RoomsPOJO>>() {
             @Override
-            public void onResponse(Call<List<BlockPOJO>> call, Response<List<BlockPOJO>> response) {
+            public void onResponse(Call<List<RoomsPOJO>> call, Response<List<RoomsPOJO>> response) {
                 a1 = response.body();
                 Log.d("TAG", "Response = " + a1);
-                displayBlocksAdapter.setMovieList(a1);
+                displayRoomsAdapter.setMovieList(a1);
             }
 
             @Override
-            public void onFailure(Call<List<BlockPOJO>> call, Throwable t) {
+            public void onFailure(Call<List<RoomsPOJO>> call, Throwable t) {
                 Log.d("TAG", "Response = " + t.toString());
             }
         });
@@ -123,72 +121,15 @@ public class DisplayBlocksActivity extends AppCompatActivity {
         Resources r = getResources();
         return Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, r.getDisplayMetrics()));
     }
-     /*btn_edit_profile=(Button)findViewById(R.id.btn_edit_profile);
-        btn_edit_profile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(UserDashBoardActivity.this, EditProfileActivity.class);
-                startActivity(intent);
-            }
-        });
-        btn_avalable_rooms=(Button)findViewById(R.id.btn_avalable_rooms);
-        btn_avalable_rooms.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(UserDashBoardActivity.this, AvalableRoomsActivity.class);
-                startActivity(intent);
-            }
-        });
-        btn_mybooked_rooms=(Button)findViewById(R.id.btn_mybooked_rooms);
-        btn_mybooked_rooms.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(UserDashBoardActivity.this, MyBookedRoomsActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        btn_logout=(Button)findViewById(R.id.btn_logout);
-        btn_logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(UserDashBoardActivity.this, LoginActivity.class);
-                startActivity(intent);
-            }
-        });*/
-
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main_menu, menu);
-        return true;
-    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        switch (id){
-            case R.id.avalable_rooms:
-                Intent contact = new Intent(getApplicationContext(), AvalableRoomsActivity.class);
-                startActivity(contact);
-                return true;
-            case R.id.mybooked_rooms:
-                Intent mybooked = new Intent(getApplicationContext(), MyBookedRoomsActivity.class);
-                startActivity(mybooked);
-                return true;
-            case R.id.edit_profile:
-                Intent editprofile = new Intent(getApplicationContext(), EditProfileActivity.class);
-                startActivity(editprofile);
-                return true;
-            case R.id.logout:
-                Intent logout = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(logout);
-                finish();
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                this.finish();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
-    }
 
+    }
 }

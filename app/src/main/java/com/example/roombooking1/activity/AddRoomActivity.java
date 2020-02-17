@@ -1,4 +1,4 @@
-package com.example.roombooking1;
+package com.example.roombooking1.activity;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -23,6 +23,7 @@ import com.a.roombooking.EndPointUrl;
 import com.a.roombooking.ResponseData;
 import com.a.roombooking.RetrofitInstance;
 import com.a.roombooking.model.GetBlocksPojo;
+import com.example.roombooking1.R;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.example.roombooking1;
+package com.example.roombooking1.activity;
 
 import android.app.DatePickerDialog;
 import android.graphics.Color;
@@ -14,6 +14,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.a.roombooking.R;
+import com.example.roombooking1.R;
 
 import java.util.Calendar;
 

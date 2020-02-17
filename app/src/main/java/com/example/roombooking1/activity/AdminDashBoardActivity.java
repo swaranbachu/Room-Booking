@@ -1,4 +1,4 @@
-package com.a.roombooking1.activity;
+package com.example.roombooking1.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
