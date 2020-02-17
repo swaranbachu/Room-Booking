@@ -1,10 +1,9 @@
-package com.a.roombooking1.activity;
+package com.example.roombooking1;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -21,7 +20,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.a.roombooking.EndPointUrl;
-import com.a.roombooking.R;
 import com.a.roombooking.ResponseData;
 import com.a.roombooking.RetrofitInstance;
 import com.a.roombooking.model.GetBlocksPojo;
@@ -64,7 +62,7 @@ public class AddRoomActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(spinner_block_name.getSelectedItem().toString().isEmpty()){
-                    Toast.makeText(getApplicationContext(),"Please select Block Name",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"Please select Floor Name",Toast.LENGTH_LONG).show();
                     return;
                 }
                 if(et_Room_name.getText().toString().isEmpty()){
@@ -76,12 +74,12 @@ public class AddRoomActivity extends AppCompatActivity {
                     return;
                 }
                 if(tv_equipment_sw.getText().toString().isEmpty()){
-                    Toast.makeText(getApplicationContext(),"Please Add Softwere Equipment",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"Please Add Software Equipment",Toast.LENGTH_LONG).show();
                     return;
                 }
 
                 if (tv_equipment_hw.getText().toString().isEmpty()){
-                    Toast.makeText(getApplicationContext(),"Please Add Hardwere Equipment",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"Please Add Hardware Equipment",Toast.LENGTH_LONG).show();
                     return;
                 }
 
@@ -101,7 +99,7 @@ public class AddRoomActivity extends AppCompatActivity {
         String swequipment=tv_equipment_sw.getText().toString();
         String bname=spinner_block_name.getSelectedItem().toString();
         String hwequipment=tv_equipment_hw.getText().toString();
-        // String other_equipment=et_other_equipment.getText().toString();
+       // String other_equipment=et_other_equipment.getText().toString();
         String room_desc=et_desc_room.getText().toString();
 
 
@@ -180,7 +178,7 @@ public class AddRoomActivity extends AppCompatActivity {
         tv_equipment_sw=(TextView) findViewById(R.id.tv_equipment_sw);
         tv_equipment_hw=(TextView) findViewById(R.id.tv_equipment_hw);
 
-        // et_other_equipment=(EditText)findViewById(R.id.et_other_equipment);
+       // et_other_equipment=(EditText)findViewById(R.id.et_other_equipment);
         et_Room_name=(EditText)findViewById(R.id.et_Room_name);
         spinner_block_name=(Spinner)findViewById(R.id.spinner_block_name);
         et_add_capacity=(EditText)findViewById(R.id.et_add_capacity);
@@ -208,7 +206,7 @@ public class AddRoomActivity extends AppCompatActivity {
         final String[] items = {" Eclipse", "Photoshop", "Android Studio", "NetBeans", "Adobe Premiere"};
         final ArrayList itemsSelected = new ArrayList();
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Select Softwere Equipment : ");
+        builder.setTitle("Select Software Equipment : ");
         builder.setMultiChoiceItems(items, null,
                 new DialogInterface.OnMultiChoiceClickListener() {
                     @Override
@@ -246,7 +244,7 @@ public class AddRoomActivity extends AppCompatActivity {
         final String[] items = {"Smart board", "Projector", "Sound Systems", "laptop"};
         final ArrayList itemsSelected = new ArrayList();
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Select Hardwere Equipment : ");
+        builder.setTitle("Select Hardware Equipment : ");
         builder.setMultiChoiceItems(items, null,
                 new DialogInterface.OnMultiChoiceClickListener() {
                     @Override
