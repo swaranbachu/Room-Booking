@@ -11,12 +11,9 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.a.roombooking.EndPointUrl;
-import com.a.roombooking.RetrofitInstance;
-import com.a.roombooking.Utils;
-import com.a.roombooking.adapter.AdminGetBookedRoomsAdapter;
-import com.a.roombooking.model.AdminGetBookedRoomsPojo;
 import com.example.roombooking1.R;
+import com.example.roombooking1.activity.adapter.AdminGetBookedRoomsAdapter;
+import com.example.roombooking1.activity.model.AdminGetBookedRoomsPojo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +33,7 @@ public class AdminGetBookedRoomsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_booked_rooms);
 
-       sharedPreferences = getSharedPreferences(Utils.SHREF, Context.MODE_PRIVATE);
+        sharedPreferences = getSharedPreferences(Utils.SHREF, Context.MODE_PRIVATE);
         uname = sharedPreferences.getString("user_name", "");
 
         getSupportActionBar().setTitle("Booked Rooms");

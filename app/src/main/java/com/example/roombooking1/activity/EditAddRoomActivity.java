@@ -15,10 +15,6 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.a.roombooking.EndPointUrl;
-import com.a.roombooking.R;
-import com.a.roombooking.ResponseData;
-import com.a.roombooking.RetrofitInstance;
 import com.example.roombooking1.R;
 
 import java.util.ArrayList;
@@ -54,14 +50,14 @@ public class EditAddRoomActivity extends AppCompatActivity {
         et_Room_name.setText(getIntent().getStringExtra("room"));
         et_block_name.setText(getIntent().getStringExtra("block"));
         et_add_capacity.setText(getIntent().getStringExtra("Capacity"));
-        tv_equipment_sw.setText(getIntent().getStringExtra("softwere"));
-        tv_equipment_hw.setText(getIntent().getStringExtra("hardwere"));
+        tv_equipment_sw.setText(getIntent().getStringExtra("software"));
+        tv_equipment_hw.setText(getIntent().getStringExtra("hardware"));
         et_desc_room.setText(getIntent().getStringExtra("description"));
 
         btn_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-             submitData();
+                submitData();
 
             }
         });
@@ -131,7 +127,7 @@ public class EditAddRoomActivity extends AppCompatActivity {
         final String[] items = {" Eclipse", "Photoshop", "Android Studio", "NetBeans", "Adobe Premiere"};
         final ArrayList itemsSelected = new ArrayList();
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Select Softwere Equipment : ");
+        builder.setTitle("Select Software Equipment : ");
         builder.setMultiChoiceItems(items, null,
                 new DialogInterface.OnMultiChoiceClickListener() {
                     @Override
@@ -169,7 +165,7 @@ public class EditAddRoomActivity extends AppCompatActivity {
         final String[] items = {"Smart board", "Projector", "Sound Systems", "laptop"};
         final ArrayList itemsSelected = new ArrayList();
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Select Hardwere Equipment : ");
+        builder.setTitle("Select Hardware Equipment : ");
         builder.setMultiChoiceItems(items, null,
                 new DialogInterface.OnMultiChoiceClickListener() {
                     @Override

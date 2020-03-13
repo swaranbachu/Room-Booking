@@ -14,12 +14,9 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.a.roombooking.EndPointUrl;
-import com.a.roombooking.R;
-import com.a.roombooking.RetrofitInstance;
-import com.a.roombooking.adapter.DisplayRoomsAdapter;
-import com.a.roombooking.model.RoomsPOJO;
 import com.example.roombooking1.R;
+import com.example.roombooking1.activity.adapter.DisplayRoomsAdapter;
+import com.example.roombooking1.activity.model.RoomsPOJO;
 
 import java.util.ArrayList;
 import java.util.List;

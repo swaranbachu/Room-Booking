@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
 
     <TextView
         android:id="@+id/tv6"
-        android:text="Select Block Name"
+        android:text="Select Floor Name"
         android:textColor="#A76464"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="15dp"
@@ -70,6 +76,88 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+
+    <TextView
+        android:id="@+id/tv_equipment1"
+        android:text="Software Equipment"
+        android:layout_marginTop="14dp"
+        android:textColor="#A76464"
+        android:layout_marginLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/tv_equipment_sw"
+        android:background="@drawable/edittext_rounded"
+        android:hint="Software Equipment"
+        android:padding="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:textColorHint="#C5BFC2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_equipment_2"
+        android:text="Hardware Equipment"
+        android:layout_marginTop="14dp"
+        android:textColor="#A76464"
+        android:layout_marginLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/tv_equipment_hw"
+        android:background="@drawable/edittext_rounded"
+        android:hint="Hardware Equipment"
+        android:padding="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:textColorHint="#C5BFC2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/tv_desc_room"
+        android:text="Description of Room"
+        android:layout_marginTop="14dp"
+        android:textColor="#A76464"
+        android:layout_marginLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/et_desc_room"
+        android:background="@drawable/edittext_rounded"
+        android:hint="Description of Room"
+        android:padding="8dp"
+        android:minLines="3"
+        android:gravity="top"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:textColorHint="#C5BFC2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/select_image"
+        android:text="Upload Image"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="#131212"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:paddingRight="8dp"
+        android:background="@drawable/button_rounded_2" />
+
     <Button
         android:id="@+id/btn_submit"
         android:text="Submit"
@@ -79,6 +167,7 @@
         android:layout_width="150dp"
         android:layout_height="40dp" />
 
-
-
 </LinearLayout>
+</ScrollView>
+
+

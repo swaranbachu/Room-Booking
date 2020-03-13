@@ -9,9 +9,9 @@ import android.widget.EditText;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.a.roombooking.R;
+import com.example.roombooking1.R;
 
-public class AdminDashBoardActivity extends AppCompatActivity {+
+public class AdminDashBoardActivity extends AppCompatActivity {
     EditText et_block_name,et_Room_name,et_add_capacity,et_add_softwere,et_add_werewerr;
     Button btn_addblock,btn_add_room,btn_booked_rooms,btn_not_booked_rooms,btn_logout,btn_all_rooms,btn_add_staff;
     @Override
@@ -24,7 +24,7 @@ public class AdminDashBoardActivity extends AppCompatActivity {+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);*/
 
 
-        btn_addblock=(Button)findViewById(R.id.btn_addfloor);
+        btn_addblock=(Button)findViewById(R.id.btn_addblock);
         btn_add_room=(Button)findViewById(R.id.btn_add_room);
         btn_not_booked_rooms=(Button)findViewById(R.id.btn_not_booked_rooms);
         btn_booked_rooms=(Button)findViewById(R.id.btn_booked_rooms);
@@ -44,7 +44,7 @@ public class AdminDashBoardActivity extends AppCompatActivity {+
         btn_addblock.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(AdminDashBoardActivity.this, AddfloorActivity.class);
+                Intent intent=new Intent(AdminDashBoardActivity.this, AddBlockActivity.class);
                 startActivity(intent);
 
             }

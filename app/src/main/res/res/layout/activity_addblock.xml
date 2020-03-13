@@ -5,7 +5,7 @@
 
     <TextView
     android:id="@+id/tv_block_name"
-    android:text="Add Block Name"
+    android:text="Add Floor Name"
     android:layout_marginTop="14dp"
     android:textColor="#A76464"
     android:layout_marginLeft="15dp"
@@ -15,7 +15,7 @@
     <EditText
         android:id="@+id/et_block_name"
         android:background="@drawable/edittext_rounded"
-        android:hint="Add Block Name"
+        android:hint="Add Floor Name"
         android:padding="8dp"
         android:layout_marginTop="4dp"
         android:layout_marginLeft="13dp"
@@ -23,6 +23,20 @@
         android:textColorHint="#C5BFC2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/select_image"
+        android:text="Upload Image"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="#131212"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:paddingRight="8dp"
+        android:background="@drawable/button_rounded_2" />
+
 
 
     <Button

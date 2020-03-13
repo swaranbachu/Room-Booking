@@ -17,12 +17,9 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.a.roombooking.EndPointUrl;
-import com.a.roombooking.R;
-import com.a.roombooking.RetrofitInstance;
-import com.a.roombooking.adapter.DisplayBlocksAdapter;
-import com.a.roombooking.model.BlockPOJO;
 import com.example.roombooking1.R;
+import com.example.roombooking1.activity.adapter.DisplayBlocksAdapter;
+import com.example.roombooking1.activity.model.BlockPOJO;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,9 +37,8 @@ public class DisplayBlocksActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_userdashboard);
-        getSupportActionBar().setTitle("Blocks");
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Floors");
+
 
         a1 = new ArrayList<>();
         recyclerView = (RecyclerView)findViewById(R.id.recyclerView);

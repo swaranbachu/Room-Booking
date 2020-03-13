@@ -16,13 +16,8 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.a.roombooking.EndPointUrl;
-import com.a.roombooking.R;
-import com.a.roombooking.ResponseData;
-import com.a.roombooking.RetrofitInstance;
-import com.a.roombooking.Utils;
-import com.a.roombooking.model.EditProfilePojo;
 import com.example.roombooking1.R;
+import com.example.roombooking1.activity.model.EditProfilePojo;
 
 import java.util.List;
 
@@ -33,7 +28,7 @@ import retrofit2.Response;
 public class EditProfileActivity extends AppCompatActivity {
     EditText et_name, et_phno, et_uname, et_password,et_email;
     TextView tv1,tv2,tv4,tv5,tv3;
-    Button btn_reg;
+    Button btn_submit;
     List<EditProfilePojo> a1;
     ProgressDialog progressDialog;
     SharedPreferences sharedPreferences;
@@ -61,19 +56,22 @@ public class EditProfileActivity extends AppCompatActivity {
         tv3=(TextView)findViewById(R.id.tv3);
 
 
-        btn_reg = (Button) findViewById(R.id.btn_reg);
+        btn_submit = (Button) findViewById(R.id.btn_submit);
         et_name = (EditText) findViewById(R.id.et_name);
         et_phno = (EditText) findViewById(R.id.et_phno);
         et_uname = (EditText) findViewById(R.id.et_uname);
         et_password = (EditText) findViewById(R.id.et_password);
         et_email = (EditText) findViewById(R.id.et_email);
 
+        et_uname.setText(session);
+        et_uname.setEnabled(false);
+
         Typeface fontstyle=Typeface.createFromAsset(getApplicationContext().getAssets(),"fonts/Lato-Medium.ttf");
         tv1.setTypeface(fontstyle);
         tv2.setTypeface(fontstyle);
         tv4.setTypeface(fontstyle);
         tv5.setTypeface(fontstyle);
-        btn_reg.setTypeface(fontstyle);
+        btn_submit.setTypeface(fontstyle);
         et_name.setTypeface(fontstyle);
         et_phno.setTypeface(fontstyle);
         et_uname.setTypeface(fontstyle);
@@ -103,6 +101,7 @@ public class EditProfileActivity extends AppCompatActivity {
 
                 et_email.setText(user.getEmailid());
 
+
                 et_password.setText(user.getPwd());
             }
 
@@ -114,7 +113,7 @@ public class EditProfileActivity extends AppCompatActivity {
         });
 
 
-        btn_reg.setOnClickListener(new View.OnClickListener() {
+        btn_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -149,7 +148,7 @@ public class EditProfileActivity extends AppCompatActivity {
 
                 progressDialog.dismiss();
                 a2 = response.body();
-                EditProfilePojo user = a1.get(0);
+                /*EditProfilePojo user = a1.get(0);
 
                 et_name.setText(user.getName());
 
@@ -157,13 +156,12 @@ public class EditProfileActivity extends AppCompatActivity {
 
                 et_email.setText(user.getEmailid());
 
-                et_password.setText(user.getPwd());
+                et_password.setText(user.getPwd());*/
 
                 if (response.body().status.equals("true")) {
                     Toast.makeText(EditProfileActivity.this, response.body().message, Toast.LENGTH_LONG).show();
                     Intent intent=new Intent(EditProfileActivity.this, DisplayBlocksActivity.class);
                     startActivity(intent);
-                   // finish();
                 } else {
                     Toast.makeText(EditProfileActivity.this, response.body().message, Toast.LENGTH_LONG).show();
                 }

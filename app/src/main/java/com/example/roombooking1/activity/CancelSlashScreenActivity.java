@@ -6,7 +6,6 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.a.roombooking.R;
 import com.example.roombooking1.R;
 
 public class CancelSlashScreenActivity extends AppCompatActivity {

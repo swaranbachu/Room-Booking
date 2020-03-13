@@ -11,12 +11,9 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.a.roombooking.EndPointUrl;
-import com.a.roombooking.RetrofitInstance;
-import com.a.roombooking.Utils;
-import com.a.roombooking.adapter.AdminNotBookedRoomsAdapter;
-import com.a.roombooking.model.AdminNotBookedRoomsPojo;
 import com.example.roombooking1.R;
+import com.example.roombooking1.activity.adapter.AdminNotBookedRoomsAdapter;
+import com.example.roombooking1.activity.model.AdminNotBookedRoomsPojo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,10 +33,10 @@ public class AdminNotBookedRoomsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_booked_rooms);
 
-       sharedPreferences = getSharedPreferences(Utils.SHREF, Context.MODE_PRIVATE);
+        sharedPreferences = getSharedPreferences(Utils.SHREF, Context.MODE_PRIVATE);
         uname = sharedPreferences.getString("user_name", "");
 
-        getSupportActionBar().setTitle("Avalable Rooms");
+        getSupportActionBar().setTitle("Available Rooms");
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 

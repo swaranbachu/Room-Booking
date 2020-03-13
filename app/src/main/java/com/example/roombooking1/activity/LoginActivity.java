@@ -14,11 +14,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.a.roombooking.EndPointUrl;
-import com.a.roombooking.R;
-import com.a.roombooking.ResponseData;
-import com.a.roombooking.RetrofitInstance;
-import com.a.roombooking.Utils;
 import com.example.roombooking1.R;
 
 import retrofit2.Call;
@@ -52,7 +47,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(LoginActivity.this, RegistrationActivity.class);
-                 startActivity(intent);
+                startActivity(intent);
 
             }
         });
@@ -111,7 +106,7 @@ public class LoginActivity extends AppCompatActivity {
                     String uname = et_USERNAME.getText().toString();
                     editor.putString("user_name",uname);
                     editor.commit();
-                    startActivity(new Intent(getApplicationContext(), DisplayBlocksActivity.class));
+                    startActivity(new Intent(LoginActivity.this, DisplayBlocksActivity.class));
                     finish();
                 }else{
                     Toast.makeText(LoginActivity.this,response.body().message,Toast.LENGTH_LONG).show();
