@@ -123,7 +123,7 @@ public class RegistrationActivity extends AppCompatActivity {
                 if (response.body().status.equals("true")) {
                     progressDialog.dismiss();
                     Toast.makeText(RegistrationActivity.this, response.body().message, Toast.LENGTH_LONG).show();
-                    Intent intent=new Intent(RegistrationActivity.this, AdminDashBoardActivity.class);
+                    Intent intent=new Intent(RegistrationActivity.this,AdminDashBoardActivity.class);
                     startActivity(intent);
                     finish();
 

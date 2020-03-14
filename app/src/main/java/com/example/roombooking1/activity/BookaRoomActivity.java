@@ -76,7 +76,7 @@ public class BookaRoomActivity extends AppCompatActivity {
         et_add_capacity=(EditText)findViewById(R.id.et_add_capacity);
         et_equipment=(EditText)findViewById(R.id.et_equipment);
         tv_dob=(TextView)findViewById(R.id.tv_dob);
-        //  et_duration=(EditText)findViewById(R.id.et_duration);
+      //  et_duration=(EditText)findViewById(R.id.et_duration);
 
         spin_duration=(Spinner) findViewById(R.id.spin_duration);
         btn_submit=(Button) findViewById(R.id.btn_submit);
@@ -133,7 +133,7 @@ public class BookaRoomActivity extends AppCompatActivity {
                     return;
                 }
                 submitData();
-                Intent intent=new Intent(BookaRoomActivity.this, SlashScreenActivity.class);
+                Intent intent=new Intent(BookaRoomActivity.this,SlashScreenActivity.class);
                 startActivity(intent);
             }
         });
@@ -257,7 +257,7 @@ public class BookaRoomActivity extends AppCompatActivity {
     private LayoutInflater inflater=null;
     private  class Software_CustomAdapter extends BaseAdapter {
         public Software_CustomAdapter(Context context) {
-            inflater = ( LayoutInflater ) BookaRoomActivity.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            inflater = ( LayoutInflater )BookaRoomActivity.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         }
         @Override
         public int getCount() {
@@ -302,28 +302,28 @@ public class BookaRoomActivity extends AppCompatActivity {
         }
     }
 
-    public void sofwareServerData() {
-        progressDialog = new ProgressDialog(BookaRoomActivity.this);
-        progressDialog.setMessage("Loading....");
-        progressDialog.show();
+   public void sofwareServerData() {
+       progressDialog = new ProgressDialog(BookaRoomActivity.this);
+       progressDialog.setMessage("Loading....");
+       progressDialog.show();
 
-        EndPointUrl service = RetrofitInstance.getRetrofitInstance().create(EndPointUrl.class);
-        Call<List<ReqPojo>> call = service.get_software();
-        call.enqueue(new Callback<List<ReqPojo>>() {
-            @Override
-            public void onResponse(Call<List<ReqPojo>> call, Response<List<ReqPojo>> response) {
-                progressDialog.dismiss();
-                list_sofraware = response.body();
-                show_software(BookaRoomActivity.this);
-            }
+       EndPointUrl service = RetrofitInstance.getRetrofitInstance().create(EndPointUrl.class);
+       Call<List<ReqPojo>> call = service.get_software();
+       call.enqueue(new Callback<List<ReqPojo>>() {
+           @Override
+           public void onResponse(Call<List<ReqPojo>> call, Response<List<ReqPojo>> response) {
+               progressDialog.dismiss();
+               list_sofraware = response.body();
+               show_software(BookaRoomActivity.this);
+           }
 
-            @Override
-            public void onFailure(Call<List<ReqPojo>> call, Throwable t) {
-                progressDialog.dismiss();
-                Toast.makeText(BookaRoomActivity.this, "Something went wrong...Please try later!", Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
+           @Override
+           public void onFailure(Call<List<ReqPojo>> call, Throwable t) {
+               progressDialog.dismiss();
+               Toast.makeText(BookaRoomActivity.this, "Something went wrong...Please try later!", Toast.LENGTH_SHORT).show();
+           }
+       });
+   }
     /**Software End**/
 
     /**hardware Start**/
@@ -349,7 +349,7 @@ public class BookaRoomActivity extends AppCompatActivity {
     private LayoutInflater inflater_hardware=null;
     private  class Hardwareware_CustomAdapter extends BaseAdapter {
         public Hardwareware_CustomAdapter() {
-            inflater_hardware = ( LayoutInflater ) BookaRoomActivity.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            inflater_hardware = ( LayoutInflater )BookaRoomActivity.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         }
         @Override
         public int getCount() {
@@ -440,7 +440,7 @@ public class BookaRoomActivity extends AppCompatActivity {
     private LayoutInflater inflater_others=null;
     private  class Others_CustomAdapter extends BaseAdapter {
         public Others_CustomAdapter() {
-            inflater_others = ( LayoutInflater ) BookaRoomActivity.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            inflater_others = ( LayoutInflater )BookaRoomActivity.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         }
         @Override
         public int getCount() {

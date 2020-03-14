@@ -57,7 +57,7 @@ public class EditAddRoomActivity extends AppCompatActivity {
         btn_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                submitData();
+             submitData();
 
             }
         });

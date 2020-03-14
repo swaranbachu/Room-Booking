@@ -11,8 +11,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.roombooking1.R;
 import com.example.roombooking1.activity.EndPointUrl;
+import com.example.roombooking1.R;
 import com.example.roombooking1.activity.ResponseData;
 import com.example.roombooking1.activity.RetrofitInstance;
 import com.example.roombooking1.activity.CancelSlashScreenActivity;

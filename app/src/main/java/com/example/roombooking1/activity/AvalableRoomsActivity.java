@@ -32,7 +32,7 @@ public class AvalableRoomsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_avalable_rooms);
 
-        // sharedPreferences = getSharedPreferences(Utils.SHREF, Context.MODE_PRIVATE);
+       // sharedPreferences = getSharedPreferences(Utils.SHREF, Context.MODE_PRIVATE);
         //uname = sharedPreferences.getString("user_name", "");
 
         getSupportActionBar().setTitle("Available Rooms");

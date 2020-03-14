@@ -12,11 +12,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 import com.example.roombooking1.R;
-import com.example.roombooking1.activity.DisplayBlocksActivity;
 import com.example.roombooking1.activity.DisplayRoomsActivity;
 import com.example.roombooking1.activity.model.BlockPOJO;
+import com.bumptech.glide.Glide;
 
 import java.util.List;
 
@@ -29,10 +28,6 @@ public class DisplayBlocksAdapter extends RecyclerView.Adapter<DisplayBlocksAdap
     public DisplayBlocksAdapter(Context context, List<BlockPOJO> movieList) {
         this.context = context;
         this.a1 = movieList;
-    }
-
-    public DisplayBlocksAdapter(DisplayBlocksActivity context, List<BlockPOJO> a1) {
-
     }
 
     public void setMovieList(List<BlockPOJO> a1) {

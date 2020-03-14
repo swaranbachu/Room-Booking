@@ -2,7 +2,7 @@ package com.example.roombooking1.activity.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class GetBlocksPojo {
+public class  GetBlocksPojo {
 
     @SerializedName("bname")
     private

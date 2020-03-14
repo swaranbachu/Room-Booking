@@ -15,11 +15,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 import com.example.roombooking1.R;
 import com.example.roombooking1.activity.BookaRoomActivity;
-import com.example.roombooking1.activity.DisplayRoomsActivity;
 import com.example.roombooking1.activity.model.RoomsPOJO;
+import com.bumptech.glide.Glide;
 
 import java.util.List;
 
@@ -32,10 +31,6 @@ public class DisplayRoomsAdapter extends RecyclerView.Adapter<DisplayRoomsAdapte
     public DisplayRoomsAdapter(Context context, List<RoomsPOJO> movieList) {
         this.context = context;
         this.a1 = movieList;
-    }
-
-    public DisplayRoomsAdapter(DisplayRoomsActivity context, List<RoomsPOJO> a1) {
-
     }
 
     public  void setMovieList(List<RoomsPOJO> a1) {

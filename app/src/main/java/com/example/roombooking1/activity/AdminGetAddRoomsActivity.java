@@ -33,7 +33,7 @@ public class AdminGetAddRoomsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_booked_rooms);
 
-        sharedPreferences = getSharedPreferences(Utils.SHREF, Context.MODE_PRIVATE);
+       sharedPreferences = getSharedPreferences(Utils.SHREF, Context.MODE_PRIVATE);
         uname = sharedPreferences.getString("user_name", "");
 
         getSupportActionBar().setTitle("All Added Rooms");
