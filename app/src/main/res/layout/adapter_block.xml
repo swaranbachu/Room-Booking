@@ -79,6 +79,7 @@
         android:text="Forget Password ?"
         android:layout_gravity="right"
         android:layout_marginRight="30dp"
+        android:visibility="invisible"
         android:layout_marginTop="15dp"
         android:textColor="#96B0BF"
         android:textSize="20dp"
@@ -96,7 +97,7 @@
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
         android:layout_marginBottom="10dp"
-        android:textColor="#131212"
+        android:textColor="#ffffff"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:background="@drawable/button1_rounded" />
@@ -109,6 +110,7 @@
         <TextView
             android:id="@+id/tv_newuser"
             android:text="New User ?"
+            android:visibility="invisible"
             android:textColor="#96B0BF"
             android:textSize="20dp"
             android:layout_width="wrap_content"
@@ -119,6 +121,7 @@
             android:id="@+id/tv_signup"
             android:text="Sign Up"
             android:layout_marginLeft="6dp"
+            android:visibility="invisible"
             android:textColor="#7BCA7E"
             android:textSize="20dp"
             android:layout_width="wrap_content"

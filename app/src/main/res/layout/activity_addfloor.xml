@@ -30,6 +30,7 @@
         android:text="Submit"
         android:layout_gravity="right"
         android:layout_margin="15dp"
+        android:textColor="#ffffff"
         android:background="@drawable/button_rounded"
         android:layout_width="150dp"
         android:layout_height="40dp" />
