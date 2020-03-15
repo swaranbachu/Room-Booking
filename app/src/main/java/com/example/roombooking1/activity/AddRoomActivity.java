@@ -76,6 +76,9 @@ public class AddRoomActivity extends AppCompatActivity implements EasyPermission
                 multicheckboxhw();
             }
         });
+
+        select_image=(Button)findViewById(R.id.select_aaimage);
+        btn_submit=(Button)findViewById(R.id.btn_aasubmit);
         select_image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -91,7 +94,7 @@ public class AddRoomActivity extends AppCompatActivity implements EasyPermission
             @Override
             public void onClick(View view) {
                 if(spinner_block_name.getSelectedItem().toString().isEmpty()){
-                    Toast.makeText(getApplicationContext(),"Please select Block Name",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"Please select Floor Name",Toast.LENGTH_LONG).show();
                     return;
                 }
                 if(et_Room_name.getText().toString().isEmpty()){
@@ -328,7 +331,7 @@ public class AddRoomActivity extends AppCompatActivity implements EasyPermission
         getSupportActionBar().setTitle("Add Rooms");
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        select_image=(Button)findViewById(R.id.select_image);
+        //select_image=(Button)findViewById(R.id.select_image);
         tv_equipment_sw=(TextView) findViewById(R.id.tv_equipment_sw);
         tv_equipment_hw=(TextView) findViewById(R.id.tv_equipment_hw);
 
@@ -338,7 +341,7 @@ public class AddRoomActivity extends AppCompatActivity implements EasyPermission
         et_add_capacity=(EditText)findViewById(R.id.et_add_capacity);
         et_desc_room=(EditText)findViewById(R.id.et_desc_room);
 
-        btn_submit=(Button)findViewById(R.id.btn_submit);
+     //   btn_submit=(Button)findViewById(R.id.btn_submit);
 
 
     }

@@ -25,7 +25,7 @@
         android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/select_image"
+        android:id="@+id/select_bimage"
         android:text="Upload Image"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="50dp"
@@ -40,7 +40,7 @@
 
 
     <Button
-        android:id="@+id/btn_submit"
+        android:id="@+id/btn_bsubmit"
         android:text="Submit"
         android:textColor="#ffffff"
         android:layout_gravity="right"

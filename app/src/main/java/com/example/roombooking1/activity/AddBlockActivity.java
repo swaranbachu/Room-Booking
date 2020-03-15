@@ -77,10 +77,12 @@ public class AddBlockActivity extends AppCompatActivity implements EasyPermissio
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        select_image=(Button)findViewById(R.id.select_image);
+
 
         et_block_name=(EditText)findViewById(R.id.et_block_name);
-        btn_submit=(Button)findViewById(R.id.btn_submit);
+
+        select_image=(Button)findViewById(R.id.select_bimage);
+        btn_submit=(Button)findViewById(R.id.btn_bsubmit);
 
     }
 

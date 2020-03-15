@@ -56,7 +56,7 @@ public class EditProfileActivity extends AppCompatActivity {
         tv3=(TextView)findViewById(R.id.tv3);
 
 
-        btn_submit = (Button) findViewById(R.id.btn_submit);
+        btn_submit = (Button) findViewById(R.id.btn_esubmit);
         et_name = (EditText) findViewById(R.id.et_name);
         et_phno = (EditText) findViewById(R.id.et_phno);
         et_uname = (EditText) findViewById(R.id.et_uname);
@@ -66,18 +66,18 @@ public class EditProfileActivity extends AppCompatActivity {
         et_uname.setText(session);
         et_uname.setEnabled(false);
 
-        Typeface fontstyle=Typeface.createFromAsset(getApplicationContext().getAssets(),"fonts/Lato-Medium.ttf");
-        tv1.setTypeface(fontstyle);
-        tv2.setTypeface(fontstyle);
-        tv4.setTypeface(fontstyle);
-        tv5.setTypeface(fontstyle);
-        btn_submit.setTypeface(fontstyle);
-        et_name.setTypeface(fontstyle);
-        et_phno.setTypeface(fontstyle);
-        et_uname.setTypeface(fontstyle);
-        et_password.setTypeface(fontstyle);
-        et_email.setTypeface(fontstyle);
-        tv3.setTypeface(fontstyle);
+//        Typeface fontstyle=Typeface.createFromAsset(getApplicationContext().getAssets(),"fonts/Lato-Medium.ttf");
+//        tv1.setTypeface(fontstyle);
+//        tv2.setTypeface(fontstyle);
+//        tv4.setTypeface(fontstyle);
+//        tv5.setTypeface(fontstyle);
+//        btn_submit.setTypeface(fontstyle);
+//        et_name.setTypeface(fontstyle);
+//        et_phno.setTypeface(fontstyle);
+//        et_uname.setTypeface(fontstyle);
+//        et_password.setTypeface(fontstyle);
+//        et_email.setTypeface(fontstyle);
+//        tv3.setTypeface(fontstyle);
 
         progressDialog = new ProgressDialog(EditProfileActivity.this);
         progressDialog.setMessage("Loading....");
