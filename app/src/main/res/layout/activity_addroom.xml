@@ -101,7 +101,7 @@
 
         <TextView
             android:id="@+id/tv_equipment_2"
-            android:text="Hardwere Equipment"
+            android:text="Hardware Equipment"
             android:layout_marginTop="14dp"
             android:textColor="#A76464"
             android:layout_marginLeft="15dp"
